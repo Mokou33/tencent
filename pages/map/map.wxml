@@ -1,0 +1,19 @@
+<!--pages/map/map.wxml-->
+
+
+<view class='wapWrap'>
+  <map class='map'
+    id="map"
+    longitude="121.318717"
+    latitude="31.092632"
+    scale="14"
+    controls="{{controls}}"
+    bindcontroltap="controltap"
+    markers="{{markers}}"
+    bindmarkertap="markertap"
+    polyline="{{polyline}}"
+    bindregionchange="regionchange"
+    show-location
+    style="width: 100%; height: 100vh;"
+  ></map>
+</view>

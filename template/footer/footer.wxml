@@ -1,0 +1,6 @@
+
+<template name="footer" >
+  <view class='footer'>
+    <text>底部</text>
+  </view>
+</template>

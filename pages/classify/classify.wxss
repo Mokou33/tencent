@@ -1,0 +1,23 @@
+/* pages/classify/classify.wxss */
+.claWrap{
+  display: flex;
+}
+
+.swiper-tab{
+  width: 180rpx;
+  /* height: 600rpx; */
+  /* border-bottom: 2rpx solid #ccc; */
+  text-align: center;
+  line-height: 88rpx;
+  font-weight: bold;
+}
+.swiper-tab-item{
+  /* display: inline-block; */
+  /* width: 33.33%; */
+  color:red;
+}
+.active{
+  color:aqua;
+  background-color: #ccc;
+  border-bottom: 4rpx solid red;
+}

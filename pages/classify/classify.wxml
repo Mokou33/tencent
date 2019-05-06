@@ -1,0 +1,31 @@
+<!--pages/classify/classify.wxml-->
+<view class='claWrap'>
+  <view  class="swiper-tab" >
+  <view 
+  class="swiper-tab-item {{currentTab==idx?'active':''}}" 
+  wx:for="{{navTab}}"
+  wx:for-index="idx"
+  wx:for-item="itemName"
+  wx:key="{{idx}}"
+  data-current="{{idx}}" 
+  bindtap="clickTab"
+  >
+    {{itemName}}
+  </view>
+
+</view>
+ 
+<swiper 
+  style='flex:1;height:600rpx; border:1px solid red' 
+  vertical
+  current="{{currentTab}}" 
+  duration="300" 
+  bindchange="swiperTab">
+  <swiper-item
+    wx:for="{{navItem}}"
+    wx:key="index"
+  >
+    <view>{{item}}商品，价格</view>
+  </swiper-item>
+</swiper>
+</view>

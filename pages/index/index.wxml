@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<import src="../../template/header/header.wxml" />
+<import src="../../template/footer/footer.wxml" />
+
+<view id='wrap'>
+  <!-- 头部 -->
+  <template is="header" />
+
+  <!-- banner -->
+  <swiper
+    indicator-dots
+    autoplay="{{autoplay}}"
+    interval="2000"
+    circular
+    indicator-color='#fff'
+    indicator-active-color="#FF69B4"
+  > 
+    <swiper-item class="pic" wx:key="{{index}}" wx:for="{{imgPic}}">
+      <image src="{{item}}" width="355" height="150"  />
+    </swiper-item>
+  </swiper>
+  <button class='auto' bindtap="changeAutoplay">{{auto}}</button>
+
+<!-- 分类项目 -->
+<view class='classic'>
+  <view  class='claPic' wx:key="{{index}}" wx:for="{{classic}}">
+    <image src="{{item.img}}"></image>
+    <view>
+      <text class='tit'>{{item.tit}}</text>
+    </view>
+  </view>
+</view>
+
+
+
+  <!-- 底部 -->
+  <template is="footer" />
+</view>
