@@ -6,22 +6,24 @@ Page({
    */
   
   data: {
-    mapH: "" ,
+    // 标记点
     markers: [{
       iconPath: '/img/icon/my1.png',
       id: 0,
-      latitude: 23.099994,
-      longitude: 113.324520,
-      width: 50,
-      height: 50
+      longitude: 121.318717,
+      latitude: 31.092632,
+      width: 40,
+      height: 40
     }],
+    // 路线
     polyline: [{
+      // 经纬度
       points: [{
-        longitude: 113.3245211,
-        latitude: 23.10229
+        longitude: 121.318717,
+        latitude: 31.092632
       }, {
-        longitude: 113.324520,
-        latitude: 23.21229
+        longitude: 120.324520,
+        latitude: 30.092632
       }],
       color: '#FF0000DD',
       width: 2,
@@ -39,9 +41,12 @@ Page({
       clickable: true
     }]
   },
+  // 视野变化执行 视野变化开始为begin，结束为end
   regionchange(e) {
     console.log(e.type)
   },
+
+  // 点击控件时触发，会返回control的id
   markertap(e) {
     console.log(e.markerId)
   },
